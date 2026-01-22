@@ -67,82 +67,294 @@
             </div>
         </section>
 
-        <!-- Journey Section -->
-        <section id="journey" class="journey">
+        <!-- Journey Section - Elegant Timeline -->
+        <section id="journey" class="journey-hitech">
             <div class="container">
-                <h2 class="section-title fade-in">The Journey & History</h2>
-                <p class="section-subtitle fade-in">
-                    เส้นทางการพัฒนาจากมหาวิทยาลัยในกำกับสู่บริษัทโฮลดิ้งที่ขับเคลื่อนนวัตกรรม</p>
+                <!-- Animated Background Elements -->
+                <div class="journey-bg-effects">
+                    <div class="scan-line"></div>
+                    <div class="grid-overlay"></div>
+                    <div class="particle particle-1"></div>
+                    <div class="particle particle-2"></div>
+                    <div class="particle particle-3"></div>
+                </div>
 
-                <div class="timeline">
-                    <div class="timeline-line"></div>
-
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-point"></div>
-                        <div class="timeline-content">
-                            <h3 class="year" data-target="2560">2560</h3>
-                            <h4>จุดเริ่มต้นแห่งการเปลี่ยนแปลง</h4>
-                            <p>มหาวิทยาลัยแม่โจ้ ประกาศความเป็นมหาวิทยาลัยในกำกับอย่างเป็นทางการ
-                                เปิดโอกาสสู่ความเป็นอิสระในการบริหารจัดการ</p>
-                        </div>
+                <div class="journey-header fade-in">
+                    <div class="journey-title-wrapper">
+                        <span class="journey-tag">HISTORY</span>
+                        <h2 class="section-title">The Journey & History</h2>
                     </div>
+                    <p class="section-subtitle cyber-text">
+                        เส้นทางการพัฒนาจากมหาวิทยาลัยในกำกับสู่บริษัทโฮลดิ้งที่ขับเคลื่อนนวัตกรรม
+                    </p>
+                </div>
 
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-point"></div>
-                        <div class="timeline-content">
-                            <h3 class="year">2561</h3>
-                            <h4>การวางรากฐาน</h4>
-                            <p>คณะกรรมการนโยบายทรัพย์สิน มหาวิทยาลัยแม่โจ้
-                                พิจารณาการปรับโครงสร้างหน่วยงานวิสาหกิจของมหาวิทยาลัย
-                                พร้อมมติอนุมัติในหลักการให้จัดตั้งบริษัทร่วมทุน</p>
-                        </div>
+                <!-- Horizontal Timeline Navigation -->
+                <div class="timeline-nav fade-in">
+                    <div class="timeline-track">
+                        <div class="timeline-progress" id="timelineProgress"></div>
                     </div>
-
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-point"></div>
-                        <div class="timeline-content">
-                            <h3 class="year">2562-2563</h3>
-                            <h4>การหารือด้านกฎหมาย</h4>
-                            <p>มหาวิทยาลัยขอหารือปัญหาด้านกฎหมายเกี่ยวกับการจัดตั้งบริษัทต่อคณะกรรมการกฤษฎีกา
-                                รวมถึงการยกร่างระเบียบมหาวิทยาลัยแม่โจ้</p>
-                        </div>
+                    <div class="timeline-years">
+                        <button class="year-btn" data-year="2560" data-index="0">
+                            <span class="year-dot"></span>
+                            <span class="year-label">2560</span>
+                        </button>
+                        <button class="year-btn" data-year="2561" data-index="1">
+                            <span class="year-dot"></span>
+                            <span class="year-label">2561</span>
+                        </button>
+                        <button class="year-btn" data-year="2562" data-index="2">
+                            <span class="year-dot"></span>
+                            <span class="year-label">2562</span>
+                        </button>
+                        <button class="year-btn" data-year="2563" data-index="3">
+                            <span class="year-dot"></span>
+                            <span class="year-label">2563</span>
+                        </button>
+                        <button class="year-btn" data-year="2564" data-index="4">
+                            <span class="year-dot"></span>
+                            <span class="year-label">2564</span>
+                        </button>
+                        <button class="year-btn" data-year="2565" data-index="5">
+                            <span class="year-dot"></span>
+                            <span class="year-label">2565</span>
+                        </button>
+                        <button class="year-btn" data-year="2566" data-index="6">
+                            <span class="year-dot"></span>
+                            <span class="year-label">2566</span>
+                        </button>
+                        <button class="year-btn highlight active" data-year="2567" data-index="7">
+                            <span class="year-dot"></span>
+                            <span class="year-label">2567</span>
+                        </button>
                     </div>
+                </div>
 
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-point"></div>
-                        <div class="timeline-content">
-                            <h3 class="year">2564</h3>
-                            <h4>ก้าวแรกของการลงทุน</h4>
-                            <p>สภามหาวิทยาลัยมีมติเห็นชอบให้มหาวิทยาลัยลงทุนในบริษัท เฟิร์สท์ ออร์แกนิค ซีดส์ จำกัด
-                                บริษัทแรกจากผลงานวิจัย</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-point"></div>
-                        <div class="timeline-content">
-                            <h3 class="year" data-target="2565">2565</h3>
-                            <h4>มติเห็นชอบอย่างเป็นเอกฉันท์</h4>
-                            <p>คณะกรรมการบริหาร คณะกรรมการการเงินและทรัพย์สิน และสภามหาวิทยาลัย
-                                มีมติเห็นชอบโครงการจัดตั้ง M.J.U. Holding Company</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item timeline-highlight fade-in">
-                        <div class="timeline-point"></div>
-                        <div class="timeline-content">
-                            <h3 class="date">9 พฤษภาคม 2567</h3>
-                            <h4>วันถือกำเนิด MAGROW</h4>
-                            <p>วันจดทะเบียนจัดตั้ง <strong>บริษัท มาโกร โฮลดิ้ง จำกัด</strong>
-                                อย่างเป็นทางการ ณ สำนักงานทะเบียนหุ้นส่วนบริษัท จังหวัดเชียงใหม่</p>
-                            <div class="capital-counter">
-                                <span class="capital-label">ทุนจดทะเบียน</span>
-                                <div class="capital-amount-wrapper">
-                                    ฿ <span id="capital-amount" data-target="20000000">0</span>
-                                </div>
+                <!-- Content Panels -->
+                <div class="timeline-content-wrapper fade-in">
+                    <!-- 2560 -->
+                    <div class="timeline-panel" data-year="2560">
+                        <div class="panel-inner">
+                            <div class="panel-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2"
+                                        opacity="0.3" />
+                                    <path d="M32 8v48M8 32h48" stroke="currentColor" stroke-width="2" />
+                                    <circle cx="32" cy="32" r="8" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="panel-text">
+                                <span class="panel-year">2 พฤษภาคม 2560</span>
+                                <h3>จุดเริ่มต้นแห่งการเปลี่ยนแปลง</h3>
+                                <p><strong>มหาวิทยาลัยแม่โจ้</strong> เป็น <strong>มหาวิทยาลัยในกำกับ</strong>
+                                    อย่างเป็นทางการ
+                                    เปิดโอกาสสู่ความเป็นอิสระในการบริหารจัดการและการดำเนินงานเชิงพาณิชย์</p>
+                            </div>
+                            <div class="panel-decoration">
+                                <div class="hex-grid"></div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- 2561 -->
+                    <div class="timeline-panel" data-year="2561">
+                        <div class="panel-inner">
+                            <div class="panel-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <rect x="8" y="16" width="48" height="32" rx="4" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M16 28h32M16 36h24" stroke="currentColor" stroke-width="2" opacity="0.5" />
+                                    <circle cx="48" cy="24" r="4" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="panel-text">
+                                <span class="panel-year">2561</span>
+                                <h3>การวางรากฐาน</h3>
+                                <p><strong>13 ก.พ. 61</strong> - คณะกรรมการนโยบายทรัพย์สิน มหาวิทยาลัยแม่โจ้
+                                    ในการประชุมครั้งที่ 1/2561
+                                    พิจารณาการปรับโครงสร้างหน่วยงานวิสาหกิจของมหาวิทยาลัยแม่โจ้</p>
+                                <p style="margin-top: 0.75rem;"><strong>27 ต.ค. 61</strong> -
+                                    สภามหาวิทยาลัยมีมติอนุมัติในหลักการให้ <strong>จัดตั้งบริษัทร่วมทุน</strong>
+                                    ของมหาวิทยาลัย
+                                </p>
+                            </div>
+                            <div class="panel-decoration">
+                                <div class="hex-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2562 -->
+                    <div class="timeline-panel" data-year="2562">
+                        <div class="panel-inner">
+                            <div class="panel-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <path d="M32 8L56 20v24L32 56 8 44V20L32 8z" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M32 24v16M24 32h16" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="panel-text">
+                                <span class="panel-year">17 ตุลาคม 2562</span>
+                                <h3>การหารือด้านกฎหมาย</h3>
+                                <p>มหาวิทยาลัยได้ขอหารือปัญหาด้านกฎหมายเกี่ยวกับการจัดตั้งบริษัทต่อ
+                                    <strong>คณะกรรมการกฤษฎีกา</strong> ในเรื่องการยก
+                                    <strong>ร่างระเบียบมหาวิทยาลัยแม่โจ้
+                                        ว่าด้วยบริษัท แม่โจ้โฮลดิ้ง จำกัด</strong>
+                                </p>
+                            </div>
+                            <div class="panel-decoration">
+                                <div class="hex-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2563 -->
+                    <div class="timeline-panel" data-year="2563">
+                        <div class="panel-inner">
+                            <div class="panel-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="2" />
+                                    <path d="M22 32l6 6 14-14" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="panel-text">
+                                <span class="panel-year">18 กุมภาพันธ์ 2563</span>
+                                <h3>การหารือข้อกฎหมายที่เกี่ยวข้อง</h3>
+                                <p>มหาวิทยาลัยได้ขอหารือข้อกฎหมายที่เกี่ยวข้องกับการดำเนินการจัดตั้ง
+                                    <strong>นิติบุคคล</strong> เพื่อร่วมกับบุคคลอื่นในการจัดตั้ง <strong>บริษัท
+                                        เมล็ดพันธุ์อินทรีย์ จำกัด</strong>
+                                </p>
+                            </div>
+                            <div class="panel-decoration">
+                                <div class="hex-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2564 -->
+                    <div class="timeline-panel" data-year="2564">
+                        <div class="panel-inner">
+                            <div class="panel-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="2" />
+                                    <path d="M32 16v16l12 8" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <circle cx="32" cy="32" r="4" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="panel-text">
+                                <span class="panel-year">4 เมษายน 2564</span>
+                                <h3>ก้าวแรกของการลงทุน</h3>
+                                <p>สภามหาวิทยาลัยมีมติเห็นชอบให้มหาวิทยาลัยลงทุนใน <strong>บริษัท เฟิร์สท์ ออร์แกนิค
+                                        ซีดส์ จำกัด</strong> ซึ่งเป็นบริษัทแรกที่เกิดจากผลงานวิจัยของมหาวิทยาลัย</p>
+                            </div>
+                            <div class="panel-decoration">
+                                <div class="hex-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2565 -->
+                    <div class="timeline-panel" data-year="2565">
+                        <div class="panel-inner">
+                            <div class="panel-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <path d="M32 8l24 14v20L32 56 8 42V22L32 8z" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M20 28l8 8 16-16" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="panel-text">
+                                <span class="panel-year">2565</span>
+                                <h3>มติเห็นชอบอย่างเป็นเอกฉันท์</h3>
+                                <p><strong>11 พ.ค. 65</strong> - คณะกรรมการบริหารมหาวิทยาลัย มีมติเห็นชอบโครงการจัดตั้ง
+                                    M.J.U. Holding Company</p>
+                                <p style="margin-top: 0.5rem;"><strong>29 มิ.ย. 65</strong> -
+                                    คณะกรรมการการเงินและทรัพย์สิน มีมติเห็นชอบ</p>
+                                <p style="margin-top: 0.5rem;"><strong>24 ก.ค. 65</strong> - สภามหาวิทยาลัย มีมติเห็นชอบ
+                                    โดยรอผลตอบข้อหารือจากอธิบดีอัยการก่อนเริ่มดำเนินการ</p>
+                                <p style="margin-top: 0.5rem;"><strong>19 พ.ย. 65</strong> -
+                                    สภามหาวิทยาลัยรับทราบข้อหารือจากอธิบดีอัยการ</p>
+                            </div>
+                            <div class="panel-decoration">
+                                <div class="hex-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2566 -->
+                    <div class="timeline-panel" data-year="2566">
+                        <div class="panel-inner">
+                            <div class="panel-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <rect x="12" y="20" width="40" height="28" rx="4" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M12 28h40" stroke="currentColor" stroke-width="2" />
+                                    <circle cx="32" cy="38" r="6" stroke="currentColor" stroke-width="2" />
+                                    <path d="M32 12v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="panel-text">
+                                <span class="panel-year">2566</span>
+                                <h3>ระยะก่อตั้ง Holding Company</h3>
+                                <p>อยู่ระหว่างเสนอ <strong>กำหนดชื่อ</strong> จากมหาวิทยาลัย
+                                    และดำเนินการตามขั้นตอนการจัดตั้งบริษัทโฮลดิ้งอย่างเป็นทางการ</p>
+                            </div>
+                            <div class="panel-decoration">
+                                <div class="hex-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2567 -->
+                    <div class="timeline-panel highlight-panel active" data-year="2567">
+                        <div class="panel-inner">
+                            <div class="panel-icon pulse-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" />
+                                    <path d="M20 32h8l4-12 8 24 4-12h8" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="panel-text">
+                                <span class="panel-year featured">9 พฤษภาคม 2567</span>
+                                <h3>วันถือกำเนิด MAGROW</h3>
+                                <p>วันจดทะเบียนจัดตั้ง <strong>บริษัท มาโกร โฮลดิ้ง จำกัด</strong> อย่างเป็นทางการ ณ
+                                    สำนักงานทะเบียนหุ้นส่วนบริษัท จังหวัดเชียงใหม่</p>
+                                <div class="capital-display">
+                                    <span class="capital-label">ทุนจดทะเบียน</span>
+                                    <div class="capital-value">
+                                        <span class="currency">฿</span>
+                                        <span id="capital-amount" class="amount" data-target="20000000">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-decoration">
+                                <div class="hex-grid"></div>
+                                <div class="glow-ring"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <div class="timeline-arrows">
+                    <button class="arrow-btn prev" id="prevYear" disabled>
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <span class="arrow-indicator"><span id="currentIndex">8</span> / 8</span>
+                    <button class="arrow-btn next" id="nextYear">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>

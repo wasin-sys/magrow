@@ -67,33 +67,110 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Timeline logic
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const timelineLine = document.querySelector('.timeline-line');
+    // Hi-Tech Timeline Navigation
+    const yearBtns = document.querySelectorAll('.year-btn');
+    const timelinePanels = document.querySelectorAll('.timeline-panel');
+    const timelineProgress = document.getElementById('timelineProgress');
+    const prevBtn = document.getElementById('prevYear');
+    const nextBtn = document.getElementById('nextYear');
+    const currentIndexSpan = document.getElementById('currentIndex');
+    let currentIndex = 7; // Start at last panel (2567)
+    const totalPanels = yearBtns.length;
 
-    // Add progress line div if it doesn't exist
-    if (timelineLine && !timelineLine.querySelector('.timeline-line-progress')) {
-        const progress = document.createElement('div');
-        progress.classList.add('timeline-line-progress');
-        timelineLine.appendChild(progress);
-    }
+    function updateTimeline(index) {
+        // Update buttons
+        yearBtns.forEach((btn, i) => {
+            btn.classList.toggle('active', i === index);
+        });
 
-    const timelineObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-
-                // If it's the highlight item, start the counter
-                if (entry.target.classList.contains('timeline-highlight')) {
-                    startCounter();
-                }
+        // Update panels with animation direction
+        timelinePanels.forEach((panel, i) => {
+            panel.classList.remove('active');
+            if (i === index) {
+                setTimeout(() => {
+                    panel.classList.add('active');
+                }, 50);
             }
         });
-    }, { threshold: 0.5 });
 
-    timelineItems.forEach(item => {
-        timelineObserver.observe(item);
+        // Update progress bar
+        const progressPercent = (index / (totalPanels - 1)) * 100;
+        if (timelineProgress) {
+            timelineProgress.style.width = `${progressPercent}%`;
+        }
+
+        // Update navigation buttons
+        if (prevBtn) prevBtn.disabled = index === 0;
+        if (nextBtn) nextBtn.disabled = index === totalPanels - 1;
+
+        // Update index indicator
+        if (currentIndexSpan) {
+            currentIndexSpan.textContent = index + 1;
+        }
+
+        currentIndex = index;
+
+        // Start counter if on last panel (MAGROW founding)
+        if (index === totalPanels - 1) {
+            startCounter();
+        }
+    }
+
+    // Year button click handlers
+    yearBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            updateTimeline(index);
+        });
     });
+
+    // Arrow navigation handlers
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                updateTimeline(currentIndex - 1);
+            }
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < totalPanels - 1) {
+                updateTimeline(currentIndex + 1);
+            }
+        });
+    }
+
+    // Keyboard navigation for timeline
+    document.addEventListener('keydown', (e) => {
+        const journeySection = document.getElementById('journey');
+        if (!journeySection) return;
+
+        const rect = journeySection.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (isInView) {
+            if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                updateTimeline(currentIndex - 1);
+            } else if (e.key === 'ArrowRight' && currentIndex < totalPanels - 1) {
+                updateTimeline(currentIndex + 1);
+            }
+        }
+    });
+
+    // Auto-play timeline on scroll into view
+    const journeySection = document.querySelector('.journey-hitech');
+    if (journeySection) {
+        const journeyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Initialize at last panel (2567)
+                    updateTimeline(totalPanels - 1);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        journeyObserver.observe(journeySection);
+    }
 
     // Counter animation function
     function animateCounter(element, target, duration = 2000) {
