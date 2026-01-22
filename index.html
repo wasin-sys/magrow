@@ -23,7 +23,7 @@
     <nav id="navbar">
         <div class="container container-nav">
             <div class="logo">
-                <span class="logo-text">MAGROW</span>
+                <img src="images/logo.svg" alt="MAGROW Logo" class="logo-img">
             </div>
             <button class="menu-toggle" aria-label="Toggle Menu">
                 <span></span>
@@ -36,13 +36,14 @@
                 <li><a href="#vision">วิสัยทัศน์</a></li>
                 <li><a href="#values">คุณค่าหลัก</a></li>
                 <li><a href="#portfolio">ผลงาน</a></li>
-                <li><a href="#contact">ติดต่อเรา</a></li>
+                <li><a href="#ecosystem">ระบบนิเวศ</a></li>
+                <li><a href="https://maidmaejo.com/" target="_blank" rel="noopener noreferrer">MAID</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <!-- Sections will be implemented here -->
+        <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -50,21 +51,29 @@
                     </h1>
                     <p class="sub-headline fade-in">จากรากฐานเกษตรที่แข็งแกร่งของแม่โจ้
                         สู่กลไกขับเคลื่อนนวัตกรระดับสากลในนาม MAGROW Holding Company</p>
+                    <p class="hero-vision fade-in">
+                        <em>"To be a leading university with international agricultural excellence."</em>
+                    </p>
                     <div class="cta-wrapper fade-in">
                         <a href="#journey" class="btn btn-primary">ทำความรู้จักเรา</a>
+                        <a href="#contact" class="btn btn-outline">ติดต่อเรา</a>
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="digital-seed-placeholder">
-                        <!-- Visual element -->
+                    <div class="hero-image-container fade-in">
+                        <img src="images/hero_innovation.png" alt="MAGROW Innovation" class="hero-img-main">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Journey Section -->
         <section id="journey" class="journey">
             <div class="container">
                 <h2 class="section-title fade-in">The Journey & History</h2>
+                <p class="section-subtitle fade-in">
+                    เส้นทางการพัฒนาจากมหาวิทยาลัยในกำกับสู่บริษัทโฮลดิ้งที่ขับเคลื่อนนวัตกรรม</p>
+
                 <div class="timeline">
                     <div class="timeline-line"></div>
 
@@ -72,15 +81,40 @@
                         <div class="timeline-point"></div>
                         <div class="timeline-content">
                             <h3 class="year" data-target="2560">2560</h3>
-                            <p>จุดเริ่มต้นการเป็นมหาวิทยาลัยในกำกับของแม่โจ้</p>
+                            <h4>จุดเริ่มต้นแห่งการเปลี่ยนแปลง</h4>
+                            <p>มหาวิทยาลัยแม่โจ้ ประกาศความเป็นมหาวิทยาลัยในกำกับอย่างเป็นทางการ
+                                เปิดโอกาสสู่ความเป็นอิสระในการบริหารจัดการ</p>
                         </div>
                     </div>
 
                     <div class="timeline-item fade-in">
                         <div class="timeline-point"></div>
                         <div class="timeline-content">
-                            <h3 class="year">2561-2564</h3>
-                            <p>การปรับโครงสร้างวิสาหกิจและการขอหารือด้านกฎหมายเพื่อจัดตั้งบริษัทร่วมทุน</p>
+                            <h3 class="year">2561</h3>
+                            <h4>การวางรากฐาน</h4>
+                            <p>คณะกรรมการนโยบายทรัพย์สิน มหาวิทยาลัยแม่โจ้
+                                พิจารณาการปรับโครงสร้างหน่วยงานวิสาหกิจของมหาวิทยาลัย
+                                พร้อมมติอนุมัติในหลักการให้จัดตั้งบริษัทร่วมทุน</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="year">2562-2563</h3>
+                            <h4>การหารือด้านกฎหมาย</h4>
+                            <p>มหาวิทยาลัยขอหารือปัญหาด้านกฎหมายเกี่ยวกับการจัดตั้งบริษัทต่อคณะกรรมการกฤษฎีกา
+                                รวมถึงการยกร่างระเบียบมหาวิทยาลัยแม่โจ้</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="year">2564</h3>
+                            <h4>ก้าวแรกของการลงทุน</h4>
+                            <p>สภามหาวิทยาลัยมีมติเห็นชอบให้มหาวิทยาลัยลงทุนในบริษัท เฟิร์สท์ ออร์แกนิค ซีดส์ จำกัด
+                                บริษัทแรกจากผลงานวิจัย</p>
                         </div>
                     </div>
 
@@ -88,7 +122,9 @@
                         <div class="timeline-point"></div>
                         <div class="timeline-content">
                             <h3 class="year" data-target="2565">2565</h3>
-                            <p>มติเห็นชอบโครงการจัดตั้ง M.J.U. Holding Company จากสภามหาวิทยาลัย</p>
+                            <h4>มติเห็นชอบอย่างเป็นเอกฉันท์</h4>
+                            <p>คณะกรรมการบริหาร คณะกรรมการการเงินและทรัพย์สิน และสภามหาวิทยาลัย
+                                มีมติเห็นชอบโครงการจัดตั้ง M.J.U. Holding Company</p>
                         </div>
                     </div>
 
@@ -96,98 +132,272 @@
                         <div class="timeline-point"></div>
                         <div class="timeline-content">
                             <h3 class="date">9 พฤษภาคม 2567</h3>
+                            <h4>วันถือกำเนิด MAGROW</h4>
                             <p>วันจดทะเบียนจัดตั้ง <strong>บริษัท มาโกร โฮลดิ้ง จำกัด</strong>
-                                อย่างเป็นทางการด้วยทุนจดทะเบียน 20 ล้านบาท</p>
-                            <div class="capital-counter">฿ <span id="capital-amount" data-target="20000000">0</span>
+                                อย่างเป็นทางการ ณ สำนักงานทะเบียนหุ้นส่วนบริษัท จังหวัดเชียงใหม่</p>
+                            <div class="capital-counter">
+                                <span class="capital-label">ทุนจดทะเบียน</span>
+                                <div class="capital-amount-wrapper">
+                                    ฿ <span id="capital-amount" data-target="20000000">0</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Vision Section -->
         <section id="vision" class="vision">
             <div class="container">
                 <div class="vision-grid">
                     <div class="vision-text fade-in">
                         <h2 class="section-title" style="text-align: left;">Vision for the Future</h2>
                         <p class="impact-text">Entrepreneurial University</p>
-                        <p>มุ่งเน้นการเชื่อมโยงงานวิจัยสู่เชิงพาณิชย์ (Research to Commerce)
-                            ขับเคลื่อนด้วยนวัตกรรมเพื่อสร้างแรงกระเพื่อมในระดับสากล</p>
+                        <p class="vision-description">
+                            มุ่งเน้นการผลิตนวัตกร นักวิจัย และบัณฑิตผู้ประกอบการที่ใส่ใจสิ่งแวดล้อม ชุมชน และสังคม
+                            พร้อมเชื่อมโยงงานวิจัยสู่เชิงพาณิชย์ (Research to Commerce)
+                            ขับเคลื่อนด้วยนวัตกรรมเพื่อสร้างแรงกระเพื่อมในระดับสากล
+                        </p>
+                        <div class="vision-stats fade-in">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="160">0</span>
+                                <span class="stat-label">Startup Teams</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="110000">0</span>
+                                <span class="stat-label">MAID Scouting 2024</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="vision-visual fade-in">
                         <div class="network-nodes">
                             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="100" cy="100" r="4" fill="#09c648" />
-                                <circle cx="140" cy="60" r="3" fill="#0e6779" />
-                                <circle cx="60" cy="70" r="3" fill="#0e6779" />
-                                <circle cx="130" cy="140" r="3" fill="#0e6779" />
-                                <circle cx="50" cy="130" r="3" fill="#0e6779" />
-                                <line x1="100" y1="100" x2="140" y2="60" stroke="#0e6779" stroke-width="0.5"
+                                <!-- Central node -->
+                                <circle cx="100" cy="100" r="8" fill="#09c648" class="pulse-node" />
+                                <!-- Connected nodes -->
+                                <circle cx="150" cy="50" r="5" fill="#0e6779" />
+                                <circle cx="50" cy="60" r="5" fill="#0e6779" />
+                                <circle cx="160" cy="120" r="4" fill="#0e6779" />
+                                <circle cx="40" cy="140" r="5" fill="#0e6779" />
+                                <circle cx="100" cy="30" r="4" fill="#0e6779" />
+                                <circle cx="170" cy="170" r="3" fill="#0e6779" />
+                                <circle cx="30" cy="100" r="4" fill="#0e6779" />
+                                <!-- Connection lines -->
+                                <line x1="100" y1="100" x2="150" y2="50" stroke="#0e6779" stroke-width="1"
                                     opacity="0.3" />
-                                <line x1="100" y1="100" x2="60" y2="70" stroke="#0e6779" stroke-width="0.5"
+                                <line x1="100" y1="100" x2="50" y2="60" stroke="#0e6779" stroke-width="1"
                                     opacity="0.3" />
-                                <line x1="100" y1="100" x2="130" y2="140" stroke="#0e6779" stroke-width="0.5"
+                                <line x1="100" y1="100" x2="160" y2="120" stroke="#0e6779" stroke-width="1"
                                     opacity="0.3" />
-                                <line x1="100" y1="100" x2="50" y2="130" stroke="#0e6779" stroke-width="0.5"
+                                <line x1="100" y1="100" x2="40" y2="140" stroke="#0e6779" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="100" x2="100" y2="30" stroke="#0e6779" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="100" x2="170" y2="170" stroke="#0e6779" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="100" x2="30" y2="100" stroke="#0e6779" stroke-width="1"
                                     opacity="0.3" />
                             </svg>
                         </div>
                     </div>
                 </div>
+
+                <!-- Research to Innovation Journey -->
+                <div class="innovation-journey fade-in">
+                    <h3>Research to Innovation Journey</h3>
+                    <div class="journey-flow">
+                        <div class="journey-step">
+                            <div class="step-icon">🔬</div>
+                            <span>Research</span>
+                        </div>
+                        <div class="journey-arrow">→</div>
+                        <div class="journey-step">
+                            <div class="step-icon">📋</div>
+                            <span>IP Analysis</span>
+                        </div>
+                        <div class="journey-arrow">→</div>
+                        <div class="journey-step">
+                            <div class="step-icon">⚙️</div>
+                            <span>Tech Transformation</span>
+                        </div>
+                        <div class="journey-arrow">→</div>
+                        <div class="journey-step">
+                            <div class="step-icon">📈</div>
+                            <span>Business Acceleration</span>
+                        </div>
+                        <div class="journey-arrow">→</div>
+                        <div class="journey-step highlight-step">
+                            <div class="step-icon">🚀</div>
+                            <span>Startup/Licensing</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Values Section -->
         <section id="values" class="values">
             <div class="container">
                 <h2 class="section-title fade-in">Core Values</h2>
+                <p class="section-subtitle fade-in">คุณค่าหลักที่ขับเคลื่อน MAGROW สู่ความสำเร็จ</p>
                 <div class="values-grid">
                     <div class="value-card fade-in">
-                        <div class="value-icon">🚀</div>
+                        <div class="value-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="30" stroke="#0e6779" stroke-width="2" />
+                                <path d="M32 12L36 28H52L39 38L43 54L32 44L21 54L25 38L12 28H28L32 12Z" stroke="#09c648"
+                                    stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
                         <h3>Accelerate Innovation</h3>
-                        <p>เร่งสปีดนวัตกรรมเพื่อความก้าวหน้า</p>
+                        <p>เร่งสปีดนวัตกรรมเพื่อความก้าวหน้า ขับเคลื่อนการวิจัยสู่การพาณิชย์ที่รวดเร็ว</p>
                     </div>
                     <div class="value-card fade-in">
-                        <div class="value-icon">🤝</div>
+                        <div class="value-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="32" r="12" stroke="#0e6779" stroke-width="2" />
+                                <circle cx="44" cy="32" r="12" stroke="#0e6779" stroke-width="2" />
+                                <path d="M32 24C36 28 36 36 32 40" stroke="#09c648" stroke-width="2" />
+                            </svg>
+                        </div>
                         <h3>Unite Ambitions</h3>
-                        <p>รวมพลังความมุ่งมั่นของนวัตกร</p>
+                        <p>รวมพลังความมุ่งมั่นของนวัตกร เชื่อมโยงนักวิจัย ผู้ประกอบการ และนักลงทุน</p>
                     </div>
                     <div class="value-card fade-in">
-                        <div class="value-icon">⚡</div>
+                        <div class="value-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 8L56 56H8L32 8Z" stroke="#0e6779" stroke-width="2" fill="none" />
+                                <line x1="32" y1="24" x2="32" y2="40" stroke="#09c648" stroke-width="3" />
+                                <circle cx="32" cy="48" r="2" fill="#09c648" />
+                            </svg>
+                        </div>
                         <h3>Drive Change</h3>
-                        <p>ขับเคลื่อนความเปลี่ยนแปลงที่มีความหมาย</p>
+                        <p>ขับเคลื่อนความเปลี่ยนแปลงที่มีความหมาย สร้างผลกระทบเชิงบวกต่อสังคมและสิ่งแวดล้อม</p>
                     </div>
                     <div class="value-card fade-in">
-                        <div class="value-icon">🌱</div>
+                        <div class="value-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 56C32 56 32 36 32 28C32 20 40 16 40 8" stroke="#0e6779" stroke-width="2" />
+                                <path d="M32 28C28 24 24 28 20 24" stroke="#09c648" stroke-width="2" />
+                                <path d="M32 36C36 32 40 36 44 32" stroke="#09c648" stroke-width="2" />
+                                <ellipse cx="32" cy="58" rx="12" ry="4" stroke="#0e6779" stroke-width="2" />
+                            </svg>
+                        </div>
                         <h3>Growth Startups</h3>
-                        <p>ปั้นผู้ประกอบการใหม่สู่อนาคต</p>
+                        <p>ปั้นผู้ประกอบการใหม่สู่อนาคต พัฒนา Innovative SMEs และ Deep Tech Startups</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <h2 class="section-title fade-in">Investment & Portfolio</h2>
+                <p class="section-subtitle fade-in">บริษัทร่วมทุนและผลงานที่พิสูจน์ความสำเร็จ</p>
+
                 <div class="portfolio-grid">
                     <div class="portfolio-item fade-in">
+                        <div class="portfolio-image">
+                            <img src="images/organic_seeds.png" alt="First Organic Seed">
+                        </div>
+                        <div class="portfolio-badge">49% SHARES</div>
                         <div class="portfolio-content">
                             <h3>First Organic Seed</h3>
-                            <p>ก้าวแรกแห่งนวัตกรรมเมล็ดพันธุ์เกษตรอินทรีย์ที่ยั่งยืน</p>
+                            <p class="portfolio-tagline">บริษัทแรกของมหาวิทยาลัยแม่โจ้</p>
+                            <p>จำหน่ายเมล็ดพันธุ์ผักและเมล็ดพันธุ์ชื่อพระราชทาน มาตรฐานระบบอินทรีย์ IFOAM
+                                ที่เกิดจากงานวิจัย</p>
                         </div>
                     </div>
                     <div class="portfolio-item fade-in">
+                        <div class="portfolio-image">
+                            <img src="images/animal_health.png" alt="Ani Product">
+                        </div>
+                        <div class="portfolio-badge">10% SHARES</div>
                         <div class="portfolio-content">
-                            <h3>Ani Product</h3>
-                            <p>ผลงานเชิงพาณิชย์จากการต่อยอดงานวิจัยระดับมหาวิทยาลัย</p>
+                            <h3>Ani Product Co., Ltd</h3>
+                            <p class="portfolio-tagline">นวัตกรรมเพื่อสัตว์เศรษฐกิจและสัตว์เลี้ยง</p>
+                            <p>มุ่งเน้นการวิจัยและพัฒนาผลิตภัณฑ์เกี่ยวกับโรคในสัตว์เศรษฐกิจและสัตว์เลี้ยง
+                                ด้วยเทคโนโลยีสีเขียวเพื่อความยั่งยืน</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Investment Models -->
                 <div class="investment-models fade-in">
                     <h3 style="text-align: center; margin-bottom: 2rem;">Investment Models</h3>
+                    <p class="investment-subtitle">รูปแบบการลงทุนที่หลากหลายเพื่อตอบโจทย์ทุกความต้องการ</p>
                     <div class="models-grid">
-                        <div class="model-item">IP Conversion</div>
-                        <div class="model-item">Venture Capital</div>
-                        <div class="model-item">Joint Venture</div>
+                        <div class="model-card">
+                            <div class="model-icon">💡</div>
+                            <h4>IP Conversion</h4>
+                            <p>แปลง IP เป็นทุน ร่วมลงทุนกับภาคเอกชนที่ได้รับสิทธิจากงานวิจัยหรือนวัตกรรม</p>
+                        </div>
+                        <div class="model-card">
+                            <div class="model-icon">📊</div>
+                            <h4>Venture Capital</h4>
+                            <p>ร่วมลงทุนกับนักวิจัย อาจารย์ หรือนักศึกษาที่ต้องการนำผลงานวิจัยไปผลิตเอง</p>
+                        </div>
+                        <div class="model-card">
+                            <div class="model-icon">🤝</div>
+                            <h4>Joint Venture</h4>
+                            <p>ร่วมลงทุนหรือลงทุนกับภาคเอกชนเพื่อจัดตั้งบริษัทให้บริการผลิตและจัดจำหน่าย</p>
+                        </div>
+                        <div class="model-card">
+                            <div class="model-icon">🏗️</div>
+                            <h4>Venture Builder</h4>
+                            <p>สนับสนุนผู้ประกอบการตั้งแต่เริ่มต้น ช่วยหาไอเดีย ระดมทุน และสร้างเครือข่าย</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Section -->
+        <section id="ecosystem" class="ecosystem">
+            <div class="container">
+                <h2 class="section-title fade-in">Innovation Ecosystem</h2>
+                <p class="section-subtitle fade-in">ระบบนิเวศนวัตกรรมที่สมบูรณ์เพื่อการพัฒนาที่ยั่งยืน</p>
+
+                <div class="ecosystem-grid fade-in">
+                    <div class="ecosystem-item">
+                        <h4>สำนักวิจัยฯ</h4>
+                        <p>IP Knowledge</p>
+                    </div>
+                    <div class="ecosystem-item">
+                        <h4>MAID</h4>
+                        <p>Incubation & Acceleration</p>
+                    </div>
+                    <div class="ecosystem-item">
+                        <h4>MAP</h4>
+                        <p>Maejo Agro Food Park</p>
+                    </div>
+                    <div class="ecosystem-item">
+                        <h4>Partners</h4>
+                        <p>NIA, TED Fund, Y&Archer</p>
+                    </div>
+                </div>
+
+                <div class="success-factors fade-in">
+                    <h3>ปัจจัยสนับสนุนความสำเร็จ</h3>
+                    <div class="factors-list">
+                        <div class="factor-item">
+                            <span class="factor-check">✓</span>
+                            <span>ความร่วมมือของบุคลากรและหน่วยงานต่าง ๆ</span>
+                        </div>
+                        <div class="factor-item">
+                            <span class="factor-check">✓</span>
+                            <span>ระเบียบฯ รัฐร่วมทุน พ.ศ. 2566</span>
+                        </div>
+                        <div class="factor-item">
+                            <span class="factor-check">✓</span>
+                            <span>ความเข้าใจของผู้บริหารต่อการจัดตั้ง UHC</span>
+                        </div>
+                        <div class="factor-item">
+                            <span class="factor-check">✓</span>
+                            <span>นักวิจัยกลุ่ม Frontier และความพร้อมของระบบนิเวศนวัตกรรม</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,22 +408,40 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <h2 class="logo-text" style="color: var(--text-white);">MAGROW</h2>
+                    <img src="images/logo.svg" alt="MAGROW Logo" class="footer-logo">
                     <p>บริษัท มาโกร โฮลดิ้ง จำกัด</p>
-                    <p style="margin-top: 1rem; opacity: 0.7;">กองบริหารงานทรัพย์สินฯ ชั้น 1 อาคารอิงคศรีกสิการ
-                        มหาวิทยาลัยแม่โจ้</p>
+                    <p class="footer-address">
+                        กองบริหารงานทรัพย์สินและกิจการพิเศษ<br>
+                        เลขที่ 63 อาคารอิงคศรีกสิการ ชั้น 1<br>
+                        หมู่ 4 ตำบลหนองหาร อำเภอสันทราย<br>
+                        จังหวัดเชียงใหม่ 50290
+                    </p>
                 </div>
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
-                    <p>Email: contact@magrow.co.th</p>
-                    <p>Phone: 053-873000</p>
+                    <p>📧 Email: magrow@mju.ac.th</p>
+                    <p>📞 Phone: 053 875 690</p>
+                    <div class="footer-logo">
+                        <p style="margin-top: 1.5rem;">
+                            <span style="font-weight: 600;">มหาวิทยาลัยแม่โจ้</span><br>
+                            <span style="opacity: 0.7;">MAEJO UNIVERSITY</span>
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 MAGROW Holding Company Limited. All Rights Reserved.
+                © 2026 MAGROW Holding Company Limited. All Rights Reserved.
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
 
     <!-- Scripts -->
     <script src="script.js"></script>
