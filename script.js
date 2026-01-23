@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Smooth scroll for navbar links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const navbarHeight = document.getElementById('navbar').offsetHeight;
+                const targetPosition = targetElement.offsetTop - navbarHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                const navLinks = document.querySelector('.nav-links');
+                const menuToggle = document.querySelector('.menu-toggle');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            }
+        });
+    });
+
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('backToTop');
@@ -159,12 +190,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Auto-play timeline on scroll into view
     const journeySection = document.querySelector('.journey-hitech');
+    let hasBeenInitialized = false;
     if (journeySection) {
         const journeyObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Initialize at last panel (2567)
-                    updateTimeline(totalPanels - 1);
+                if (entry.isIntersecting && !hasBeenInitialized) {
+                    // Initialize at last panel (2567) if not already there
+                    if (currentIndex !== totalPanels - 1) {
+                        updateTimeline(totalPanels - 1);
+                    } else {
+                        // Even if at index, ensure counters run
+                        startCounter();
+                    }
+                    hasBeenInitialized = true;
                 }
             });
         }, { threshold: 0.3 });
@@ -220,11 +258,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            const target = document.querySelector(href);
             if (target) {
                 const navbarHeight = navbar.offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
                 window.scrollTo({
-                    top: target.offsetTop - navbarHeight - 20,
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }
@@ -253,4 +296,123 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Ecosystem Slider Logic
+    const sliderTrack = document.querySelector('.ecosystem-slider-track');
+    const sliderContainer = document.querySelector('.ecosystem-slider-container');
+    const prevBtnEco = document.getElementById('ecosystemPrev');
+    const nextBtnEco = document.getElementById('ecosystemNext');
+
+    if (sliderTrack && sliderContainer) {
+        // Clone items for seamless infinite loop
+        const originalItems = Array.from(document.querySelectorAll('.ecosystem-item'));
+        const totalOriginalItems = originalItems.length;
+
+        // Clone all items and append to the track
+        originalItems.forEach(item => {
+            const clone = item.cloneNode(true);
+            sliderTrack.appendChild(clone);
+        });
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let currentIndex = 0;
+        let isAnimating = false;
+
+        const gap = 40; // 2.5rem = 40px
+        let itemWidth = originalItems[0].offsetWidth + gap;
+
+        function updateSlider(animate = true) {
+            if (animate) {
+                sliderTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+            } else {
+                sliderTrack.style.transition = 'none';
+            }
+            sliderTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+
+        function handleInfiniteLoop() {
+            // Check if we've moved into the cloned section
+            if (currentIndex >= totalOriginalItems) {
+                currentIndex = 0;
+                updateSlider(false);
+            } else if (currentIndex < 0) {
+                currentIndex = totalOriginalItems - 1;
+                updateSlider(false);
+            }
+            isAnimating = false;
+        }
+
+        // Handle teleportation after transition
+        sliderTrack.addEventListener('transitionend', handleInfiniteLoop);
+
+        if (prevBtnEco) {
+            prevBtnEco.addEventListener('click', () => {
+                if (isAnimating) return;
+                isAnimating = true;
+                currentIndex--;
+                updateSlider();
+            });
+        }
+
+        if (nextBtnEco) {
+            nextBtnEco.addEventListener('click', () => {
+                if (isAnimating) return;
+                isAnimating = true;
+                currentIndex++;
+                updateSlider();
+            });
+        }
+
+        // Mouse/Touch Drag
+        sliderContainer.addEventListener('mousedown', (e) => {
+            if (isAnimating) return;
+            isDown = true;
+            startX = e.pageX - sliderContainer.offsetLeft;
+            scrollLeft = currentIndex * itemWidth;
+            sliderContainer.style.cursor = 'grabbing';
+            sliderTrack.style.transition = 'none';
+        });
+
+        const finishDrag = (e) => {
+            if (!isDown) return;
+            isDown = false;
+            sliderContainer.style.cursor = 'grab';
+            sliderTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+
+            const movedBy = e ? (startX - (e.pageX - sliderContainer.offsetLeft)) : 0;
+
+            // Snap to nearest item
+            if (Math.abs(movedBy) > itemWidth / 6) {
+                if (movedBy > 0) {
+                    currentIndex++;
+                } else {
+                    currentIndex--;
+                }
+            }
+            updateSlider();
+        };
+
+        sliderContainer.addEventListener('mouseleave', () => finishDrag());
+        sliderContainer.addEventListener('mouseup', (e) => finishDrag(e));
+
+        sliderContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - sliderContainer.offsetLeft;
+            const walk = (x - startX);
+            sliderTrack.style.transform = `translateX(${-scrollLeft + walk}px)`;
+        });
+
+        // Initialize (no need to disable buttons in infinite mode)
+        if (prevBtnEco) prevBtnEco.disabled = false;
+        if (nextBtnEco) nextBtnEco.disabled = false;
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            itemWidth = originalItems[0].offsetWidth + gap;
+            updateSlider(false);
+        });
+    }
 });
