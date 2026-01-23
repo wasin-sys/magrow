@@ -226,6 +226,75 @@ h4 {
     position: relative;
     overflow: hidden;
     padding-top: 100px;
+    background-color: #f8fafb;
+}
+
+/* Background Decorations */
+.hero-bg-blobs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+}
+
+.blob-1 {
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(9, 198, 72, 0.12) 0%, transparent 70%);
+    top: -200px;
+    right: -100px;
+    animation: blobFloat 25s infinite alternate;
+}
+
+.blob-2 {
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(45, 138, 156, 0.1) 0%, transparent 70%);
+    bottom: -300px;
+    left: -200px;
+    animation: blobFloat 30s infinite alternate-reverse;
+}
+
+.blob-3 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(9, 198, 72, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    animation: pulseSoft 4s infinite ease-in-out;
+}
+
+.hero-bg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(14, 103, 121, 0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+@keyframes blobFloat {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(100px, -50px) scale(1.1);
+    }
 }
 
 .hero .container {
@@ -1116,14 +1185,14 @@ h1 {
     text-align: center;
 }
 
-.dev-level-header.highlight-yellow {
-    border: 3px solid #F7A823;
-    background: rgba(247, 168, 35, 0.05);
+.dev-level-header.highlight-teal {
+    border: 3px solid #2d8a9c;
+    background: rgba(45, 138, 156, 0.05);
 }
 
-.dev-level-header.highlight-red {
-    border: 3px solid #E74C3C;
-    background: rgba(231, 76, 60, 0.05);
+.dev-level-header.highlight-accent {
+    border: 3px solid var(--accent-color);
+    background: rgba(9, 198, 72, 0.05);
 }
 
 .level-name {
@@ -1154,13 +1223,13 @@ h1 {
     padding: 0.5rem;
 }
 
-.dev-cell.highlight-yellow-bg {
-    background: rgba(247, 168, 35, 0.08);
+.dev-cell.highlight-teal-bg {
+    background: rgba(45, 138, 156, 0.08);
     border-radius: 8px;
 }
 
-.dev-cell.highlight-red-bg {
-    background: rgba(231, 76, 60, 0.08);
+.dev-cell.highlight-accent-bg {
+    background: rgba(9, 198, 72, 0.08);
     border-radius: 8px;
 }
 
